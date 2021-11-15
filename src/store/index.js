@@ -11,6 +11,13 @@ const counterReducer = (
     };
   }
 
+  if (action.type === "INCREASE") {
+    return {
+      counter: state.counter + action.amount,
+      isShowingCounter: state.isShowingCounter,
+    };
+  }
+
   if (action.type === "DECREMENT") {
     return {
       counter: state.counter - 1,
